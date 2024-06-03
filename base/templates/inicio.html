@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Shop Online</title>
+    <!-- Bootstrap core CSS -->
+    <link href="../static/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+      
+      nav {
+            background-color: #4CAF50;
+            overflow: hidden;
+        }
+
+        nav a {
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            background-color: #ddd;
+            color: rgb(20, 20, 20);
+        }
+     
+        header {
+            background-color: rgb(30, 29, 29);
+            color: #ffffff;
+            text-align: center;
+        }
+     
+     
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>   
+    <!-- Custom styles for this template -->
+    <link href="../static/css/starter-template.css" rel="stylesheet">
+  </head>
+
+  <body>    
+  <div class="col-lg-10 mx-auto p-3 py-md-5">
+      <header>
+        <h1>Pet Shop Online</h1>
+      </header>
+      <nav>
+          <a href="{% url 'inicio' %}">Home</a>
+          <a href="{% url 'contato' %}">Contato</a>
+      </nav>
+      
+      <hr>
+      <div>
+      <main>
+        {% block principal %}
+          <h1>Faça a reserva de banho do seu Pet</h1>
+          <a href="{% url 'reserva:criar_reserva' %}" class="btn btn-primary">Fazer Reserva</a>
+        {% endblock %}
+      </main>
+      </div>
+    
+      <footer class="pt-5 my-5 text-muted border-top">
+        Curso Python Ultima Schol
+      </footer>
+  </div>
+        <script src="../static/js/bootstrap.bundle.min.js"></script>
+
+        
+  </body>
+</html>
